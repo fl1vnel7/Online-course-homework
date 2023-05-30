@@ -1,0 +1,53 @@
+.certificate {
+    width: 100%;
+    display: flex;
+    @include flex(flex-start, space-between);
+    margin-bottom: 117px;
+    &__row {
+        width: 100%;
+        display: flex;
+        .text-side {
+            display: flex;
+            flex-direction: column;
+            &__text {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 150%;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                color: $gray-900;
+                margin-bottom: 8px;
+            }
+            &__title {
+                font-weight: 900;
+                font-size: 46px;
+                line-height: 130%;
+                color: $gray-900;
+                margin-bottom: 48px;
+            }
+            &__second {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 160%;
+                color: $gray-800;
+                margin-bottom: 32px;
+            }
+            .logos {
+                display: flex;
+                .logo {
+                    width: 105px;
+                    height: 50px;
+                }
+                .logo:not(:last-child) {
+                    margin-right: 40px;
+                }
+            }
+        }
+        .picture-side {
+            & img {
+                width: 705px;
+                height: 500px;
+            }
+        }
+    }
+}

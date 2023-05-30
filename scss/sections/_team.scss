@@ -1,0 +1,55 @@
+.team {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 180px;
+    &__row {
+        display: flex;
+        flex-direction: column;
+        @include flex(flex-start, flex-start);
+        &-text {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 150%;
+            text-align: center;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: $gray-900;
+            margin-bottom: 8px;
+        }
+        &-title {
+            font-weight: 900;
+            font-size: 46px;
+            line-height: 130%;
+            text-align: center;
+            color: $gray-900;
+            margin-bottom: 60px;
+        }
+        .four-members {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            .main-member:not(:last-child) {
+                margin-right: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .member-name {
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 150%;
+                text-align: center;
+                color: $gray-800;
+            }
+            .direction {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 160%;
+                text-align: center;
+                color: $gray-700;
+            }
+        }
+    }
+}

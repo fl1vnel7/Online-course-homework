@@ -1,0 +1,64 @@
+.causes {
+    width: 100%;
+    margin-top: 180px;
+    margin-bottom: 180px;
+    &__row {
+        display: flex;
+        @include flex(flex-start, space-between)
+    }
+    &__image {
+        width: 60%;
+        border-radius: 4px;
+    }
+    &__text {
+        width: 30%;
+        flex-direction: column;
+        .text-beginning {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 150%;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: $gray-900;
+            margin-bottom: 8px;
+        }
+    }
+    &__title {
+        font-weight: 900;
+        font-size: 46px;
+        line-height: 130%;
+        color: $gray-900;
+        margin-bottom: 40px;
+    }
+    &__column-text {
+        flex-direction: column;
+        margin-bottom: 48px;
+    }
+    &__column-texts {
+        @include flex(flex-start, unset);
+    }
+    .tick {
+        margin-right: 16px;
+        &__text {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 160%;
+            color: $gray-800;
+        }
+    }
+    &__more-button {
+        @include flex(center, center);
+        padding: 0px 32px;
+        gap: 10px;background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+        border-radius: 4px;
+        color: $white;
+        width: 161px;
+        height: 44px;
+        &-text {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 44px;
+            letter-spacing: 0.5px;
+        }
+    }
+}

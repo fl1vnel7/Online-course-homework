@@ -1,0 +1,53 @@
+.subscribe {
+    background: #FEDBD3;
+    padding-top: 120px;
+    padding-bottom: 50px;
+    &__text {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 150%;
+        text-align: center;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $gray-900;
+        margin-bottom: 8px;
+    }
+    &__title {
+        font-weight: 900;
+        font-size: 46px;
+        line-height: 130%;
+        text-align: center;
+        color: $gray-900;
+        margin-bottom: 60px;
+    }
+    .search {
+        display: flex;
+        @include flex(center, center);
+        .inp {
+            width: 422px;
+            height: 52px;
+            background: #FFFFFF;
+            border: 1px solid #D7DADD;
+            border-radius: 4px;
+            padding: 13px 16px;
+            margin-right: 24px;
+        }
+        .search-btn {
+            padding: 0px 40px;
+            gap: 10px;
+            width: 154px;
+            height: 52px;
+            background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+            border-radius: 4px;
+            border: 1px solid $primary;
+            color: $white;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 52px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+    }
+}

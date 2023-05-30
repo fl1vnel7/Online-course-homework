@@ -1,0 +1,11 @@
+@mixin flex($align, $justify) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}
+@mixin trn($p:'all', $s: 0.2) {
+    transition: $p #{$s}s ease-in-out;
+}
+%flex-center {
+    @include flex(center, center)
+}

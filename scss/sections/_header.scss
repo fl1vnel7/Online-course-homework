@@ -1,0 +1,55 @@
+.header {
+    position: relative;
+    padding-top: 20px;
+    z-index: 10;
+    &__menu {
+        @include flex(center, space-between);
+    }
+    &__row {
+        @include flex(center, space-between)
+    }
+    &__row {
+        gap: 60px;
+    }
+    &__buttons {
+        @include flex(center, unset);
+        gap: 36px;
+    }
+    &__navbar {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__link {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 160%;
+        color: $gray-800;
+        @include trn(color);
+        &:not(:last-child) {
+            margin-bottom: 4px;
+            margin-right: 40px;
+        }
+        &:hover {
+            color: $primary;
+        }
+    }
+    &__button {
+        padding: 13px 20px;
+        background-color: transparent;
+        border: none;
+        border-radius: 4px;
+        @include flex(center, unset);
+        gap: 8px;
+        &-text{
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 160%;
+        }
+        &-gradient {
+            background: $btn-gradient;
+            .header__button-text {
+                color: $white;
+            }
+        }
+    }
+}
