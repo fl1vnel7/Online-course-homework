@@ -6,8 +6,12 @@
         @include flex(center, space-between);
         margin-bottom: 60px;
     }
+    .featured__courses-text-second {
+        text-align: center;
+    }
     &__courses-text {
         display: flex;
+        width: 100%;
         flex-direction: column;
         .beginning__text {
             font-weight: 700;

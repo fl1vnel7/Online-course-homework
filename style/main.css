@@ -57,6 +57,9 @@ li {
   padding-top: 20px;
   z-index: 10;
 }
+.header .menu__header {
+  margin-bottom: 80px;
+}
 .header__menu {
   display: flex;
   align-items: center;
@@ -335,8 +338,12 @@ li {
   justify-content: space-between;
   margin-bottom: 60px;
 }
+.featured .featured__courses-text-second {
+  text-align: center;
+}
 .featured__courses-text {
   display: flex;
+  width: 100%;
   flex-direction: column;
 }
 .featured__courses-text .beginning__text {
@@ -696,4 +703,9 @@ li {
   align-items: center;
   text-align: center;
   letter-spacing: 0.5px;
+}
+
+.footer {
+  width: 100%;
+  background-color: #1E212C;
 }/*# sourceMappingURL=main.css.map */
