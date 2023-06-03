@@ -14,21 +14,37 @@
     .container {
         position: relative;
         z-index: 2;
+        @include media(1050){
+            width: 100%;
+        }
     }
     &__row {
         padding: 125px 0 190px 0;
         @include flex(center, space-between);
+        @media screen and  (max-width: 1080px){
+            display: flex;
+            flex-direction: column;
+        }
     }
     &__title {
         font-weight: 900;
-        font-size: 64px;
+        @include adaptive-value('font-size', 64, 28);
         line-height: 130%;
         letter-spacing: 1px;
         color: $gray-900;
         margin: 24px 0 60px 0;
-    }
+        @include media (1080) {
+            width: 100%;
+            text-align: center;
+        }
+            
+        }
     &__content {
         width: 40%;
+        @include media(1080) {
+            width: 100%;
+            text-align: center;
+        }
     }
     &__image {
         width: 50%;
@@ -43,26 +59,34 @@
         display: flex;
         .banner__button {
             font-weight: 700;
-            font-size: 16px;
+            @include adaptive-value('font-size', 16, 8);
             line-height: 52px;
             padding: 0 40px;
             color: $primary;
             border: 1px solid $primary;
             margin-right: 24px;
             border-radius: 4px;
+            @include media(1080){
+                text-align: center;
+            }
         }
         .banner__button-gradient {
             background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
             color: $white;
         }
     }
+
 }
+
 .play {
     &__button {
         background-color: transparent;
         border: none;
-        @include flex(center, unset);
+        @include flex(center, center);
         gap: 16px;
+        @include media(1080){
+            width: 100%;
+        }
     }
     &__icon {
         position: relative;
@@ -89,7 +113,7 @@
     }
     &__text {
         font-weight: 700;
-        font-size: 14px;
+        @include adaptive-value('font-size', 14, 7);
         line-height: 150%;
         color: $gray-900;
     }
@@ -98,6 +122,12 @@
     &__banner {
         display: flex;
         flex-wrap: wrap;
+        @media screen and (max-width:1245px){
+            width: 30%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
     }
     &__card {
         position: relative;
@@ -119,13 +149,13 @@
     }
     &__number{
         font-weight: 900;
-        font-size: 46px;
         line-height: 130%;
         color: $gray-900;
+        @include adaptive-value('font-size', 46, 28);
     }
     &__text {
         font-weight: 400;
-        font-size: 16px;
+        @include adaptive-value('font-size', 16, 8);
         line-height: 160%;
         color: $gray-900;
     }

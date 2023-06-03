@@ -1,0 +1,15 @@
+.banner {
+    .content__banner {
+        width: 100%;
+        text-align: center;
+        .title__banner {
+            width: 100%;
+            font-weight: 900;
+            font-size: 64px;
+            line-height: 130%;
+            letter-spacing: 1px;
+            color: $gray-900;
+            margin: 24px 0 60px 0;
+        }
+    }
+}

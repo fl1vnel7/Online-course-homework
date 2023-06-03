@@ -1,4 +1,18 @@
 .footer {
     width: 100%;
     background-color: #1E212C;
+    &__row {
+        @include flex(center, space-between);
+        width: 100%;
+    }
+    &__main-part {
+        display: flex;
+        flex-direction: column;
+        &__logo {
+            width: 130px;
+            height: 22px;
+            margin-bottom: 24px;
+            margin-top: 80px;
+        }
+    }
 }

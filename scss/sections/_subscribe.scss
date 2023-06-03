@@ -4,7 +4,7 @@
     padding-bottom: 50px;
     &__text {
         font-weight: 700;
-        font-size: 16px;
+        @include adaptive-value('font-size', 16, 8);
         line-height: 150%;
         text-align: center;
         letter-spacing: 1px;
@@ -14,7 +14,7 @@
     }
     &__title {
         font-weight: 900;
-        font-size: 46px;
+        @include adaptive-value('font-size', 46, 28);
         line-height: 130%;
         text-align: center;
         color: $gray-900;
@@ -42,7 +42,7 @@
             border: 1px solid $primary;
             color: $white;
             font-weight: 700;
-            font-size: 16px;
+            @include adaptive-value('font-size', 16, 8);
             line-height: 52px;
             display: flex;
             align-items: center;

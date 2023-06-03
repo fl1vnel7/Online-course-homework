@@ -9,7 +9,7 @@
         @include flex(flex-start, flex-start);
         &-text {
             font-weight: 700;
-            font-size: 16px;
+            @include adaptive-value('font-size', 16, 8);
             line-height: 150%;
             text-align: center;
             letter-spacing: 1px;
@@ -19,7 +19,7 @@
         }
         &-title {
             font-weight: 900;
-            font-size: 46px;
+            @include adaptive-value('font-size', 46, 28);
             line-height: 130%;
             text-align: center;
             color: $gray-900;
@@ -29,6 +29,7 @@
             width: 100%;
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
             .main-member:not(:last-child) {
                 margin-right: 30px;
                 display: flex;
@@ -36,20 +37,35 @@
                 justify-content: center;
                 align-items: center;
             }
-            .member-name {
+            .member-name_first,
+            .member-name_second,
+            .member-name_third {
                 font-weight: 700;
-                font-size: 20px;
+                @include adaptive-value('font-size', 20, 10);
                 line-height: 150%;
                 text-align: center;
                 color: $gray-800;
             }
+            .main-member-fourth{
+            .member-name_fourth{
+                font-weight: 700;
+                @include adaptive-value('font-size', 20, 10);
+                line-height: 150%;
+                text-align: center;
+                color: $gray-800;
+                @include media (1003){
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+    }
+            }
             .direction {
                 font-weight: 400;
-                font-size: 16px;
+                @include adaptive-value('font-size', 16, 8);
                 line-height: 160%;
                 text-align: center;
                 color: $gray-700;
             }
         }
-    }
-}

@@ -1,7 +1,4 @@
 .header {
-    .menu__header {
-        margin-bottom: 80px;
-    }
     position: relative;
     padding-top: 20px;
     z-index: 10;
@@ -21,10 +18,13 @@
     &__navbar {
         display: flex;
         flex-wrap: wrap;
+        @media screen and (max-width: 1050px){
+            display: block; 
+        }
     }
     &__link {
         font-weight: 700;
-        font-size: 16px;
+        @include adaptive-value('font-size', 16, 8);
         line-height: 160%;
         color: $gray-800;
         @include trn(color);
@@ -45,7 +45,7 @@
         gap: 8px;
         &-text{
             font-weight: 700;
-            font-size: 16px;
+            @include adaptive-value('font-size', 16, 8);
             line-height: 160%;
         }
         &-gradient {

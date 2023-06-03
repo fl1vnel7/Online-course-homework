@@ -6,16 +6,12 @@
         @include flex(center, space-between);
         margin-bottom: 60px;
     }
-    .featured__courses-text-second {
-        text-align: center;
-    }
     &__courses-text {
         display: flex;
-        width: 100%;
         flex-direction: column;
         .beginning__text {
             font-weight: 700;
-            font-size: 16px;
+            @include adaptive-value('font-size', 16, 8);
             line-height: 150%;
             letter-spacing: 1px;
             text-transform: uppercase;
@@ -24,9 +20,9 @@
         }
         .featured__courses-title {
             font-weight: 900;
-            font-size: 46px;
             line-height: 130%;
             color: $gray-900;
+            @include adaptive-value('font-size', 46, 28);
         }
     }
     .featured__courses-button {
@@ -40,7 +36,7 @@
         color: $primary;
         & span {
             font-weight: 700;
-            font-size: 16px;
+            @include adaptive-value('font-size', 16, 8);
             line-height: 52px;
         }
     }
@@ -48,6 +44,11 @@
         width: 100%;
         @include flex(center, space-between);
         flex-wrap: wrap;
+        @include media (1260){
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
     }
     &__course-card {
         display: flex;
@@ -73,7 +74,7 @@
         }
         &__job {
             font-weight: 400;
-            font-size: 14px;
+            @include adaptive-value('font-size', 14, 7);
             line-height: 150%;
             color: #FFFFFF;
             padding: 1px 8px;
@@ -83,7 +84,7 @@
         &__job-direction {
             font-style: normal;
             font-weight: 700;
-            font-size: 20px;
+            @include adaptive-value('font-size', 20, 10);
             line-height: 150%;
             color: $gray-900;
         }
@@ -113,14 +114,14 @@
     .price {
         &__dollar {
             font-weight: 700;
-            font-size: 18px;
+            @include adaptive-value('font-size', 18, 9);
             line-height: 150%;
             color: $danger;
             margin-right: 3px;
         }
         .person-name {
             font-weight: 400;
-            font-size: 18px;
+            @include adaptive-value('font-size', 18, 9);
             line-height: 150%;
             color: $gray-700;
         }
